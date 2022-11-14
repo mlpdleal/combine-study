@@ -57,6 +57,29 @@ According Wikipedia, reactive programming is a declarative programming paradigm 
 * Values only transmitted if one of more subscribers
 * Can also terminate with an explict completion signal
 
+## Operators: Combine's Business Logic
+
+* Play a central role in the Combine framework ecosystem
+* Filter and manipulate values from an upstream publisher
+* Each operator returns a new publisher
+* Can be chained to add processing steps
+* Perform error handling, buffering, prefetches
+
+## Consuming Data with Subscribers
+
+* Contract to receive sequence of values
+* Has two possible outcomes, input and failure
+* Continues to receive as publisher transmits
+* sink and .assign for receive values
+* Conform to AnyCancellable protocol
+
+## The Subject Protocol
+ 
+* A publisher that exposes a method for outside callers to publish elements
+* Common for bridginf code from the old imperative world into the modern, new Combine world
+* .send() method used to emit select values to one or more subscribers 
+* As an aggregator for multiple subscribers, via subscriber demands signaling unlimited demand from connected publishers
+* currentValueSubject persists initial state values for subscribers, unlike passthroughSubject
 
 # Reference
 
