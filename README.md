@@ -49,6 +49,14 @@ According Wikipedia, reactive programming is a declarative programming paradigm 
 * Through backpressure, subscriber decides how much to ingest
 * All subscribers conform to Cancelable protocol
 
+## The Publisher Protocol
+
+* Contract to transmit sequence of values
+* Has two possible outcomes: output and failure
+* Values transmitted over time
+* Values only transmitted if one of more subscribers
+* Can also terminate with an explict completion signal
+
 
 # Reference
 
