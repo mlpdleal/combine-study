@@ -39,6 +39,16 @@ According Wikipedia, reactive programming is a declarative programming paradigm 
 * Not as mature as RxSwift
 * Small set of available sinks and publisers
 
+## Combine lifecycle - Subscribers and Publishers
+
+![Data_flow](https://user-images.githubusercontent.com/20096045/201734042-a1876273-508d-4b4c-8b41-5aeb444db093.png)
+
+## Subscriber Orchestrates the Workflow
+
+* Subscriber-driver framework
+* Through backpressure, subscriber decides how much to ingest
+* All subscribers conform to Cancelable protocol
+
 
 # Reference
 
