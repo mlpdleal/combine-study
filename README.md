@@ -39,6 +39,8 @@ According Wikipedia, reactive programming is a declarative programming paradigm 
 * Not as mature as RxSwift
 * Small set of available sinks and publisers
 
+# Combine Fundamentals
+
 ## Combine lifecycle - Subscribers and Publishers
 
 ![Data_flow](https://user-images.githubusercontent.com/20096045/201734042-a1876273-508d-4b4c-8b41-5aeb444db093.png)
@@ -80,6 +82,53 @@ According Wikipedia, reactive programming is a declarative programming paradigm 
 * .send() method used to emit select values to one or more subscribers 
 * As an aggregator for multiple subscribers, via subscriber demands signaling unlimited demand from connected publishers
 * currentValueSubject persists initial state values for subscribers, unlike passthroughSubject
+
+## Future 
+
+* Results in single output or failure
+* Wraps an asynchronous call
+* Commonly used to make a single request/response
+* Promise in a closure type that accpets a result consisting of a single value from future or falure
+
+# Work with Rest APIs
+
+## URLSession
+
+* Instance method, dataTaskPublisher
+* Two variants, allowing you to pass in either a URLRequest or URL and returning a DataTaskPublisher
+
+## Handling Errors in Combine
+
+* Declare in advance a typed error definition
+* Handle expected errors using mapError operator
+* Handle network errors using retry operator
+* Catch errors or use ReplaceError to completely ignore the error
+
+# Advanced Concepts
+
+## Managing Threads with Schedulers
+
+### Scheduler Protocol
+
+* Defines when and how to execute a closure
+* Applied upstream with publishers or downstream via subscription
+* Two common types of operators for orchestrating thread or queue: receive(on: ) and subscribe(on: )
+* .delay, .throttle, and .debounce also support the scheduler protocol
+* Goal is to perform heavy computation on a background thread but all UI-related tasks on the main thread
+
+## Back Presure 
+
+* Subscriber-centric pull design
+* Subscriber requests values and demands how much
+* You control the backpressure (demand) flow to ingest how much you can handle
+* Demand is increased incrementally each time new value is received by subscriber
+
+## Type Erasures
+
+* Swift has access controls to restrict access to structs, classes, methods, or properties
+* Combine has type erasures to obfuscate inner workings of publishers
+* AnyPublisher struct, conforming to Publisher protocol
+* Cannot add values to AnyPublisher via .send()
 
 # Reference
 

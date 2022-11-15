@@ -7,5 +7,10 @@
         <page name='DataTaskPublisherExample'/>
         <page name='Future example'/>
         <page name='Exercise_3_APIRequest'/>
+        <page name='Manage Threads - schedulers'/>
+        <page name='Custom Publisher and subscriber'/>
+        <page name='Backpressure'/>
+        <page name='CombineOperators'/>
+        <page name='Final_Exercise'/>
     </pages>
 </playground>
