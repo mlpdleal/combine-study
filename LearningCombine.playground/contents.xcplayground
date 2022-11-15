@@ -4,6 +4,8 @@
         <page name='CombineFundamentals'/>
         <page name='Untitled Page'/>
         <page name='Publish and subscribe with subjects'/>
+        <page name='DataTaskPublisherExample'/>
         <page name='Future example'/>
+        <page name='Exercise_3_APIRequest'/>
     </pages>
 </playground>
